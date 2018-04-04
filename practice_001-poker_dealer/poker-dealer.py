@@ -6,7 +6,7 @@ r'''
 这是一个随机发牌程序的练习
 问题描述：
     1) 程序的使用方法:
-    $ poker-dealer  [-h | --help] [-p|--number players] [--with[out]-joker]
+    $ poker-dealer  [-h | --help] [-p|--players players] [--without-joker]
         -p --players           how many player, default is 4
            --with[out]-joker   enable joker, default is --with-joker
         -h                     show this
@@ -29,7 +29,7 @@ def usage(name):
     ''' print usage '''
 
     helpstr = '''usage:
-{0}  [-h | --help] [-p|--number players] [--with[out]-joker]
+{0}  [-h | --help] [-p|--players players] [--without-joker]
        -p  --players           how many player, default is 4
            --without-joker     without joker
        -h  --help              show this
@@ -117,7 +117,7 @@ if __name__ == '__main__':
 
     try:
         opts, args = getopt.getopt(
-            sys.argv[1:], "hp:", ["help", "numbers=", "without-joker"])
+            sys.argv[1:], "hp:", ["help", "players=", "without-joker"])
     except getopt.GetoptError as err:
         print(err)
         usage(filename)
