@@ -19,8 +19,6 @@ r'''
 
 '''
 
-__author__ = 'xujun'
-
 from PIL import Image
 
 def usage(name):

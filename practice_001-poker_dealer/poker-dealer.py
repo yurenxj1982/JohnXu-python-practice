@@ -17,9 +17,6 @@ r'''
 
 '''
 
-__author__ = 'xujun'
-
-
 from enum import Enum
 import random
 
